@@ -12,6 +12,20 @@ A Model Context Protocol (MCP) server that provides desktop notification capabil
 ## Installation
 
 ```bash
+# Install from npm
+npm install @uehaj/mcp-notifier
+
+# Or install globally
+npm install -g @uehaj/mcp-notifier
+```
+
+For development:
+
+```bash
+# Clone repository
+git clone https://github.com/uehaj/mcp-notifier.git
+cd mcp-notifier
+
 # Install dependencies
 npm install
 
@@ -24,7 +38,14 @@ npm run build
 Start the server:
 
 ```bash
-npm start
+# If installed globally
+mcp-notifier
+
+# If installed locally
+npx @uehaj/mcp-notifier
+
+# Or run directly from the build directory
+node build/index.js
 ```
 
 ### Integration with Claude Desktop
@@ -41,7 +62,7 @@ npm start
     "mcp-notifier": {
       "command": "node",
       "args": [
-        "/absolute/path/to/mcp-notifier/build/index.js"
+        "/absolute/path/to/node_modules/@uehaj/mcp-notifier/build/index.js"
       ]
     }
   }
@@ -75,7 +96,13 @@ Advanced notification tool with more options:
 
 ## Testing
 
-You can test the server using the MCP Inspector:
+Run tests:
+
+```bash
+npm test
+```
+
+You can also test the server using the MCP Inspector:
 
 ```bash
 npx @modelcontextprotocol/inspector node build/index.js
@@ -85,3 +112,7 @@ npx @modelcontextprotocol/inspector node build/index.js
 
 - Node.js 14 or higher
 - npm 6 or higher
+
+## License
+
+MIT

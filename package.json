@@ -1,19 +1,32 @@
 {
   "name": "@uehaj/mcp-notifier",
   "version": "1.0.0",
+  "description": "MCP server for desktop notifications",
   "type": "module",
   "scripts": {
     "build": "tsc",
     "start": "node build/index.js",
     "test": "node tests/run-tests.js",
     "test:basic": "node tests/test-notify.js",
-    "test:advanced": "node tests/test-advanced-notify.js"
+    "test:advanced": "node tests/test-advanced-notify.js",
+    "prepublishOnly": "npm run build"
   },
   "main": "build/index.js",
-  "files": ["build"],
-  "keywords": ["mcp", "node-notifier"],
+  "bin": {
+    "mcp-notifier": "bin/mcp-notifier.js"
+  },
+  "files": ["build", "assets", "bin"],
+  "keywords": ["mcp", "node-notifier", "notifications", "claude", "model-context-protocol"],
   "author": "uehaj",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uehaj/mcp-notifier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uehaj/mcp-notifier/issues"
+  },
+  "homepage": "https://github.com/uehaj/mcp-notifier#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "node-notifier": "^10.0.1",
