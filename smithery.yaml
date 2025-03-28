@@ -1,0 +1,22 @@
+# Smithery.ai configuration
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      defaultIcon:
+        type: string
+        description: "Default icon path to use for notifications"
+      sound:
+        type: boolean
+        description: "Enable sounds for notifications by default"
+        default: false
+    required: []
+  commandFunction: |-
+    (config) => ({
+      command: "node",
+      args: ["build/index.js"],
+      env: {
+        NODE_ENV: "production"
+      }
+    })
