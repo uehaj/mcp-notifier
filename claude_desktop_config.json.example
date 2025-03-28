@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mcp-notifier": {
+      "command": "node",
+      "args": [
+        "/Users/ueha-j/mcp-work/mcp-notifier/build/index.js"
+      ]
+    }
+  }
+}
