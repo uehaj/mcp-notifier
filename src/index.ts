@@ -22,11 +22,6 @@ try {
   console.error("[DEBUG] McpServer instance created successfully");
   
   // Debug server capabilities
-  console.error("[DEBUG] Server configuration:", {
-    name: server.name,
-    version: server.version
-    // tools will be logged after registration
-  });
 } catch (err) {
   console.error("[FATAL] Failed to create McpServer instance:", err);
   throw err;
@@ -140,7 +135,7 @@ try {
           iconPath = path.join(__dirname, "..", "assets", "info.svg");
           break;
       }
-      console.error(`[DEBUG] Using icon path for type ${type}: ${iconPath}`);
+      console.error(`[DEBUG] Using icon path for type ${type || 'default'}: ${iconPath}`);
       
       // Create a promise to handle the notification
       console.error(`[DEBUG] Showing advanced notification...`);
@@ -161,7 +156,9 @@ try {
               reject(err);
             }
             console.error(`[DEBUG] Advanced notification response: ${JSON.stringify(response)}`);
-            console.error(`[DEBUG] Metadata: ${JSON.stringify(metadata)}`);
+            if (metadata) {
+              console.error(`[DEBUG] Metadata: ${JSON.stringify(metadata)}`);
+            }
             resolve({ response, action: metadata?.activationValue });
           }
         );
@@ -218,6 +215,7 @@ async function main() {
   }
 }
 
+// Set up error handlers
 process.on('uncaughtException', (err) => {
   console.error('[FATAL] Uncaught exception:', err);
   console.error('[DEBUG] Stack trace:', err.stack);
@@ -249,6 +247,7 @@ try {
   process.exit(1);
 }
 
+// Start the server
 main().catch((error) => {
   console.error("[FATAL] Error in main():", error);
   console.error("[DEBUG] Detailed error:", {

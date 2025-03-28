@@ -1,11 +1,19 @@
 {
-  "name": "mcp-notifier",
+  "name": "@uehaj/mcp-notifier",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "test": "node tests/run-tests.js",
+    "test:basic": "node tests/test-notify.js",
+    "test:advanced": "node tests/test-advanced-notify.js"
   },
+  "main": "build/index.js",
+  "files": ["build"],
+  "keywords": ["mcp", "node-notifier"],
+  "author": "uehaj",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "node-notifier": "^10.0.1",
