@@ -1,4 +1,40 @@
 # Smithery.ai configuration
+localOnly: true
+description: "MCP server providing desktop notification capabilities"
+requirements:
+  - "Node.js 18 or higher"
+  - "Desktop environment (Windows, macOS, or Linux)"
+  - "Access permissions to notification system"
+installation: |
+  ## Local Installation Instructions
+  
+  1. Clone the repository: `git clone https://github.com/uehaj/mcp-notifier.git`
+  2. Install dependencies: `cd mcp-notifier && npm install`
+  3. Build: `npm run build`
+  4. Run: `node build/index.js`
+  
+  For Claude Desktop integration, refer to the claude_desktop_config.json.example file.
+usage: |
+  ## Usage Examples
+  
+  Basic notification:
+  ```
+  {
+    "title": "Test Notification",
+    "message": "This is a test notification",
+    "sound": true
+  }
+  ```
+  
+  Advanced notification:
+  ```
+  {
+    "title": "Important Alert",
+    "message": "This is an important message",
+    "type": "warning",
+    "timeout": 10000
+  }
+  ```
 startCommand:
   type: stdio
   configSchema:
