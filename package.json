@@ -16,7 +16,9 @@
     "publish:major": "npm version major && npm publish --access public"
   },
   "main": "build/index.js",
-  "bin": "build/index.js",
+  "bin": {
+    "mcp-notifier": "build/index.js"
+  },
   "files": [
     "build",
     "assets",
