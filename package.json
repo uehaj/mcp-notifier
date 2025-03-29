@@ -9,7 +9,11 @@
     "test": "node tests/run-tests.js",
     "test:basic": "node tests/test-notify.js",
     "test:advanced": "node tests/test-advanced-notify.js",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish": "npm publish --access public",
+    "publish:patch": "npm version patch && npm publish --access public",
+    "publish:minor": "npm version minor && npm publish --access public",
+    "publish:major": "npm version major && npm publish --access public"
   },
   "main": "build/index.js",
   "bin": "build/index.js",

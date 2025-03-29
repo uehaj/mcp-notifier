@@ -139,6 +139,33 @@ cd mcp-notifier
 npx @modelcontextprotocol/inspector node build/index.js
 ```
 
+## Development
+
+### Publishing to npm
+
+The package includes several npm scripts to help with publishing:
+
+```bash
+# Publish the current version
+npm run publish
+
+# Increment patch version (1.0.0 -> 1.0.1) and publish
+npm run publish:patch
+
+# Increment minor version (1.0.0 -> 1.1.0) and publish
+npm run publish:minor
+
+# Increment major version (1.0.0 -> 2.0.0) and publish
+npm run publish:major
+```
+
+These commands will:
+1. Automatically run the build process
+2. Update the version number as needed
+3. Publish the package to npm with public access
+
+You need to be logged in to npm (`npm login`) before running these commands.
+
 ## Requirements
 
 - Node.js 18 or higher
