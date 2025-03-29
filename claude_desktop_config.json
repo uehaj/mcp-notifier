@@ -1,10 +1,9 @@
 {
   "mcpServers": {
     "mcp-notifier": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "-e",
-        "import('@uehaj/mcp-notifier/build/index.js')"
+        "@uehaj/mcp-notifier"
       ]
     }
   }

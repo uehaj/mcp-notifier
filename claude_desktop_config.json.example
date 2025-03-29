@@ -1,12 +1,11 @@
 {
   "mcpServers": {
-    "mcp-notifier-direct": {
-      "command": "node",
+    "mcp-notifier-npx": {
+      "command": "npx",
       "args": [
-        "-e",
-        "import('@uehaj/mcp-notifier/build/index.js')"
+        "@uehaj/mcp-notifier"
       ],
-      "_comment": "Method 1: Run the notifier directly from published package"
+      "_comment": "Method 1: Run the notifier directly with npx (recommended)"
     },
     "mcp-notifier-clone": {
       "command": "node",

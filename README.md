@@ -22,14 +22,16 @@ For more details on platform-specific behavior, visit the [node-notifier documen
 
 You can use MCP Notifier in two ways:
 
-### Option 1: Run Directly from the Published Package
+### Option 1: Run Directly with npx
 
-If you're encountering issues with `npx @uehaj/mcp-notifier`, you can run the package directly:
+The simplest way to use MCP Notifier is with npx:
 
 ```bash
-# Run the server directly with node
-npx -p @uehaj/mcp-notifier node -e "import('@uehaj/mcp-notifier/build/index.js')"
+# Run directly with npx
+npx @uehaj/mcp-notifier
 ```
+
+This will download and execute the package with a single command.
 
 ### Option 2: Clone and Build from Source
 
@@ -56,16 +58,15 @@ node build/index.js
 
 2. Choose one of the following configuration methods:
 
-### For direct node method:
+### For npx method (recommended):
 
 ```json
 {
   "mcpServers": {
     "mcp-notifier": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "-e",
-        "import('@uehaj/mcp-notifier/build/index.js')"
+        "@uehaj/mcp-notifier"
       ]
     }
   }
@@ -93,10 +94,10 @@ node build/index.js
 
 This MCP server is available on [Smithery](https://smithery.ai/server/@uehaj/mcp-notifier). Since it requires desktop access to function properly, it must be installed locally rather than used as a hosted service.
 
-### Run via Node:
+### Run via Smithery CLI:
 ```bash
-# Run using direct node import
-npx -p @uehaj/mcp-notifier node -e "import('@uehaj/mcp-notifier/build/index.js')"
+# Run using Smithery CLI
+npx @smithery/cli run @uehaj/mcp-notifier
 ```
 
 ### Manual setup from repository:
@@ -130,8 +131,8 @@ Advanced notification tool with more options:
 Run tests:
 
 ```bash
-# For direct node import method
-npx -p @uehaj/mcp-notifier npx @modelcontextprotocol/inspector node -e "import('@uehaj/mcp-notifier/build/index.js')"
+# For npx method
+npx @modelcontextprotocol/inspector npx @uehaj/mcp-notifier
 
 # For git clone method
 cd mcp-notifier
