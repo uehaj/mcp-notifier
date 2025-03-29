@@ -12,9 +12,7 @@
     "prepublishOnly": "npm run build"
   },
   "main": "build/index.js",
-  "bin": {
-    "mcp-notifier": "bin/mcp-notifier.js"
-  },
+  "bin": "./bin/mcp-notifier.js",
   "files": ["build", "assets", "bin"],
   "keywords": ["mcp", "node-notifier", "notifications", "claude", "model-context-protocol"],
   "author": "uehaj",

@@ -22,16 +22,14 @@ For more details on platform-specific behavior, visit the [node-notifier documen
 
 You can use MCP Notifier in two ways:
 
-### Option 1: Run Directly with npx (No Installation Required)
+### Option 1: Run Directly from the Published Package
 
-You can run the MCP Notifier directly without installing it using npx:
+If you're encountering issues with `npx @uehaj/mcp-notifier`, you can run the package directly:
 
 ```bash
-# Run directly without installation
-npx @uehaj/mcp-notifier
+# Run the server directly with node
+npx -p @uehaj/mcp-notifier node -e "import('@uehaj/mcp-notifier/build/index.js')"
 ```
-
-This will download and execute the package in a single command without installing it globally or locally.
 
 ### Option 2: Clone and Build from Source
 
@@ -58,15 +56,16 @@ node build/index.js
 
 2. Choose one of the following configuration methods:
 
-### For npx (No Installation) method:
+### For direct node method:
 
 ```json
 {
   "mcpServers": {
     "mcp-notifier": {
-      "command": "npx",
+      "command": "node",
       "args": [
-        "@uehaj/mcp-notifier"
+        "-e",
+        "import('@uehaj/mcp-notifier/build/index.js')"
       ]
     }
   }
@@ -94,10 +93,10 @@ node build/index.js
 
 This MCP server is available on [Smithery](https://smithery.ai/server/@uehaj/mcp-notifier). Since it requires desktop access to function properly, it must be installed locally rather than used as a hosted service.
 
-### Run via Smithery CLI (No Installation):
+### Run via Node:
 ```bash
-# Run directly using Smithery CLI
-npx @smithery/cli run @uehaj/mcp-notifier
+# Run using direct node import
+npx -p @uehaj/mcp-notifier node -e "import('@uehaj/mcp-notifier/build/index.js')"
 ```
 
 ### Manual setup from repository:
@@ -131,8 +130,8 @@ Advanced notification tool with more options:
 Run tests:
 
 ```bash
-# For npx method
-npx @modelcontextprotocol/inspector npx @uehaj/mcp-notifier
+# For direct node import method
+npx -p @uehaj/mcp-notifier npx @modelcontextprotocol/inspector node -e "import('@uehaj/mcp-notifier/build/index.js')"
 
 # For git clone method
 cd mcp-notifier
@@ -142,7 +141,7 @@ npx @modelcontextprotocol/inspector node build/index.js
 ## Requirements
 
 - Node.js 18 or higher
-- npm 6 or higher (for npx command)
+- npm 6 or higher
 - Desktop environment (Windows, macOS, or Linux)
 - Access permissions to notification system
 
