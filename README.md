@@ -1,5 +1,7 @@
 # MCP Notifier
+[![npm downloads](https://img.shields.io/npm/dw/@uehaj/mcp-notifier)](https://www.npmjs.com/package/@uehaj/mcp-notifier)
 [![smithery badge](https://smithery.ai/badge/@uehaj/mcp-notifier)](https://smithery.ai/server/@uehaj/mcp-notifier)
+
 
 A Model Context Protocol (MCP) server that provides desktop notification capabilities using node-notifier.
 
