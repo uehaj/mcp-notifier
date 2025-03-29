@@ -4,7 +4,7 @@
   "description": "MCP server for desktop notifications",
   "type": "module",
   "scripts": {
-    "build": "tsc && node add-shebang.js && chmod +x build/index.js",
+    "build": "tsc && chmod +x build/index.js",
     "start": "node build/index.js",
     "test": "node tests/run-tests.js",
     "test:basic": "node tests/test-notify.js",
@@ -17,7 +17,7 @@
   },
   "main": "build/index.js",
   "bin": {
-    "mcp-notifier": "build/index.js"
+    "mcp-notifier": "bin/mcp-notifier.js"
   },
   "files": [
     "build",

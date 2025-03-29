@@ -4,4 +4,4 @@
 import '../build/index.js';
 
 // The main server code will be executed when imported
-console.error('MCP Notifier CLI wrapper initialized');
+console.error('[DEBUG] MCP Notifier CLI wrapper initialized');
