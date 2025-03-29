@@ -1,4 +1,5 @@
 # MCP Notifier
+[![smithery badge](https://smithery.ai/badge/@uehaj/mcp-notifier)](https://smithery.ai/server/@uehaj/mcp-notifier)
 
 A Model Context Protocol (MCP) server that provides desktop notification capabilities using node-notifier.
 
@@ -147,16 +148,16 @@ The package includes several npm scripts to help with publishing:
 
 ```bash
 # Publish the current version
-npm run publish
+npm run release
 
 # Increment patch version (1.0.0 -> 1.0.1) and publish
-npm run publish:patch
+npm run release:patch
 
 # Increment minor version (1.0.0 -> 1.1.0) and publish
-npm run publish:minor
+npm run release:minor
 
 # Increment major version (1.0.0 -> 2.0.0) and publish
-npm run publish:major
+npm run release:major
 ```
 
 These commands will:
