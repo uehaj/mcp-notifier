@@ -1,6 +1,6 @@
 {
   "name": "@uehaj/mcp-notifier",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server for desktop notifications",
   "type": "module",
   "scripts": {
