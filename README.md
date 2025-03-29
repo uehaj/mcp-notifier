@@ -9,6 +9,15 @@ A Model Context Protocol (MCP) server that provides desktop notification capabil
 - Support for different notification types (info, success, warning, error)
 - Customizable notification settings
 
+## Platform Support
+
+This MCP server uses [node-notifier](https://www.npmjs.com/package/node-notifier) and works across multiple platforms:
+- **macOS**: Uses macOS Notification Center
+- **Windows**: Uses Windows Toast Notifications (Windows 8+) or taskbar balloons (< Windows 8)
+- **Linux**: Uses notify-send command for Gnome/Ubuntu notifications
+
+For more details on platform-specific behavior, visit the [node-notifier documentation](https://www.npmjs.com/package/node-notifier).
+
 ## Usage Options
 
 You can use MCP Notifier in two ways:
