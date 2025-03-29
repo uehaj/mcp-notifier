@@ -9,19 +9,20 @@ A Model Context Protocol (MCP) server that provides desktop notification capabil
 - Support for different notification types (info, success, warning, error)
 - Customizable notification settings
 
-## Installation Options
+## Usage Options
 
 You can use MCP Notifier in two ways:
 
-### Option 1: Install from NPM
+### Option 1: Run Directly with npx (No Installation Required)
+
+You can run the MCP Notifier directly without installing it using npx:
 
 ```bash
-# Install globally
-npm install -g @uehaj/mcp-notifier
-
-# Or install locally in your project
-npm install @uehaj/mcp-notifier
+# Run directly without installation
+npx @uehaj/mcp-notifier
 ```
+
+This will download and execute the package in a single command without installing it globally or locally.
 
 ### Option 2: Clone and Build from Source
 
@@ -35,25 +36,8 @@ npm install
 
 # Build the project
 npm run build
-```
 
-## Running the Server
-
-### If installed from NPM:
-
-```bash
-# If installed globally
-mcp-notifier
-
-# If installed locally
-npx @uehaj/mcp-notifier
-```
-
-### If cloned from source:
-
-```bash
-# From the project directory
-npm run build
+# Run the server
 node build/index.js
 ```
 
@@ -65,7 +49,7 @@ node build/index.js
 
 2. Choose one of the following configuration methods:
 
-### For NPM installation:
+### For npx (No Installation) method:
 
 ```json
 {
@@ -80,7 +64,7 @@ node build/index.js
 }
 ```
 
-### For local git clone:
+### For local git clone method:
 
 ```json
 {
@@ -101,10 +85,10 @@ node build/index.js
 
 This MCP server is available on [Smithery](https://smithery.ai/server/@uehaj/mcp-notifier). Since it requires desktop access to function properly, it must be installed locally rather than used as a hosted service.
 
-### Installation via Smithery:
+### Run via Smithery CLI (No Installation):
 ```bash
-# Install using Smithery CLI
-npx @smithery/cli install @uehaj/mcp-notifier
+# Run directly using Smithery CLI
+npx @smithery/cli run @uehaj/mcp-notifier
 ```
 
 ### Manual setup from repository:
@@ -138,23 +122,18 @@ Advanced notification tool with more options:
 Run tests:
 
 ```bash
-npm test
-```
-
-You can also test the server using the MCP Inspector:
-
-```bash
-# For NPM installation
+# For npx method
 npx @modelcontextprotocol/inspector npx @uehaj/mcp-notifier
 
-# For git clone
+# For git clone method
+cd mcp-notifier
 npx @modelcontextprotocol/inspector node build/index.js
 ```
 
 ## Requirements
 
 - Node.js 18 or higher
-- npm 6 or higher
+- npm 6 or higher (for npx command)
 - Desktop environment (Windows, macOS, or Linux)
 - Access permissions to notification system
 

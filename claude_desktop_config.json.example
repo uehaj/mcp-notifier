@@ -1,18 +1,18 @@
 {
   "mcpServers": {
-    "mcp-notifier-npm": {
+    "mcp-notifier-npx": {
       "command": "npx",
       "args": [
         "@uehaj/mcp-notifier"
       ],
-      "_comment": "Method 1: Start the notifier using the published NPM package (requires npm install @uehaj/mcp-notifier)"
+      "_comment": "Method 1: Run the notifier directly with npx without installation"
     },
     "mcp-notifier-clone": {
       "command": "node",
       "args": [
         "/path/to/your/cloned/mcp-notifier/build/index.js"
       ],
-      "_comment": "Method 2: Start the notifier using local build from git clone (replace with your actual path)"
+      "_comment": "Method 2: Run the notifier using local build from git clone (replace with your actual path)"
     }
   }
 }
