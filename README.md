@@ -9,17 +9,21 @@ A Model Context Protocol (MCP) server that provides desktop notification capabil
 - Support for different notification types (info, success, warning, error)
 - Customizable notification settings
 
-## Installation
+## Installation Options
+
+You can use MCP Notifier in two ways:
+
+### Option 1: Install from NPM
 
 ```bash
-# Install from npm
-npm install @uehaj/mcp-notifier
-
-# Or install globally
+# Install globally
 npm install -g @uehaj/mcp-notifier
+
+# Or install locally in your project
+npm install @uehaj/mcp-notifier
 ```
 
-For development:
+### Option 2: Clone and Build from Source
 
 ```bash
 # Clone repository
@@ -33,9 +37,9 @@ npm install
 npm run build
 ```
 
-## Usage
+## Running the Server
 
-Start the server:
+### If installed from NPM:
 
 ```bash
 # If installed globally
@@ -43,20 +47,26 @@ mcp-notifier
 
 # If installed locally
 npx @uehaj/mcp-notifier
+```
 
-# Or run directly from the build directory
+### If cloned from source:
+
+```bash
+# From the project directory
+npm run build
 node build/index.js
 ```
 
-### Integration with Claude Desktop
+## Integration with Claude Desktop
 
 1. Edit your Claude Desktop configuration file:
    - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
    - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
-2. Add one of the following configurations:
+2. Choose one of the following configuration methods:
 
-Using npx (recommended):
+### For NPM installation:
+
 ```json
 {
   "mcpServers": {
@@ -70,14 +80,15 @@ Using npx (recommended):
 }
 ```
 
-Using direct path:
+### For local git clone:
+
 ```json
 {
   "mcpServers": {
     "mcp-notifier": {
       "command": "node",
       "args": [
-        "/absolute/path/to/node_modules/@uehaj/mcp-notifier/build/index.js"
+        "/absolute/path/to/cloned/mcp-notifier/build/index.js"
       ]
     }
   }
@@ -90,11 +101,14 @@ Using direct path:
 
 This MCP server is available on [Smithery](https://smithery.ai/server/@uehaj/mcp-notifier). Since it requires desktop access to function properly, it must be installed locally rather than used as a hosted service.
 
-To install from Smithery:
+### Installation via Smithery:
 ```bash
 # Install using Smithery CLI
 npx @smithery/cli install @uehaj/mcp-notifier
 ```
+
+### Manual setup from repository:
+Follow the "Clone and Build from Source" instructions above.
 
 ## Available Tools
 
@@ -130,6 +144,10 @@ npm test
 You can also test the server using the MCP Inspector:
 
 ```bash
+# For NPM installation
+npx @modelcontextprotocol/inspector npx @uehaj/mcp-notifier
+
+# For git clone
 npx @modelcontextprotocol/inspector node build/index.js
 ```
 
