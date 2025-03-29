@@ -1,6 +1,6 @@
 {
   "name": "@uehaj/mcp-notifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for desktop notifications",
   "type": "module",
   "scripts": {
@@ -17,8 +17,18 @@
   },
   "main": "build/index.js",
   "bin": "build/index.js",
-  "files": ["build", "assets", "bin"],
-  "keywords": ["mcp", "node-notifier", "notifications", "claude", "model-context-protocol"],
+  "files": [
+    "build",
+    "assets",
+    "bin"
+  ],
+  "keywords": [
+    "mcp",
+    "node-notifier",
+    "notifications",
+    "claude",
+    "model-context-protocol"
+  ],
   "author": "uehaj",
   "license": "MIT",
   "repository": {
