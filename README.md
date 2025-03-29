@@ -54,8 +54,23 @@ node build/index.js
    - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
    - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
-2. Add the following configuration:
+2. Add one of the following configurations:
 
+Using npx (recommended):
+```json
+{
+  "mcpServers": {
+    "mcp-notifier": {
+      "command": "npx",
+      "args": [
+        "@uehaj/mcp-notifier"
+      ]
+    }
+  }
+}
+```
+
+Using direct path:
 ```json
 {
   "mcpServers": {
@@ -70,6 +85,16 @@ node build/index.js
 ```
 
 3. Restart Claude Desktop
+
+## Smithery Integration
+
+This MCP server is available on [Smithery](https://smithery.ai/server/@uehaj/mcp-notifier). Since it requires desktop access to function properly, it must be installed locally rather than used as a hosted service.
+
+To install from Smithery:
+```bash
+# Install using Smithery CLI
+npx @smithery/cli install @uehaj/mcp-notifier
+```
 
 ## Available Tools
 
@@ -110,8 +135,10 @@ npx @modelcontextprotocol/inspector node build/index.js
 
 ## Requirements
 
-- Node.js 14 or higher
+- Node.js 18 or higher
 - npm 6 or higher
+- Desktop environment (Windows, macOS, or Linux)
+- Access permissions to notification system
 
 ## License
 

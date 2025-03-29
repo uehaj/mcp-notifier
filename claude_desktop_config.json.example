@@ -1,10 +1,18 @@
 {
   "mcpServers": {
     "mcp-notifier": {
+      "command": "npx",
+      "args": [
+        "@uehaj/mcp-notifier"
+      ],
+      "_comment": "Starts the notifier MCP server using NPM package."
+    },
+    "mcp-notifier-local": {
       "command": "node",
       "args": [
-        "/Users/ueha-j/mcp-work/mcp-notifier/build/index.js"
-      ]
+        "/path/to/your/mcp-notifier/build/index.js"
+      ],
+      "_comment": "Alternative method: starts the notifier MCP server using local build. Replace with your actual path."
     }
   }
 }
